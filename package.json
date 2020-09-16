@@ -12,5 +12,8 @@
   },
   "author": "team_oyez",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/walidhor/track_equipment#readme"
+  "homepage": "https://bitbucket.org/walidhor/track_equipment#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
 }
