@@ -9,6 +9,8 @@ type Mutation {
   deleteCompany(id_company: ID!): Company!
 }
 
+### Company
+
 type Company {
   id: ID!
   name: String!
@@ -23,4 +25,22 @@ input CreateCompanyInput {
 input UpdateCompanyInput {
   name: String
   address: String
+}
+
+#### Equipment
+type Equipment {
+  id: ID!
+  name: String!
+  reference: String
+  public: Boolean
+  available: Boolean
+  status: StatusEnum
+  image: String
+  #category: Category
+  #user: User
+}
+
+enum StatusEnum {
+  GOOD
+  BAD
 }
