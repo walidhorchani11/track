@@ -8,11 +8,10 @@ module.exports = {
       return company;
     },
 
-    companies: (parent, args, ctx, info) => {
-      return [
-        { name: 'Oyez', address: 'tunis' },
-        { name: 'Sofrecom', address: 'tunis' },
-      ];
+    companies: () => {
+      const companies = companyProvider.getCompanies();
+
+      return companies;
     },
   },
   Mutation: {
