@@ -1,0 +1,23 @@
+type Query {
+  equipments: [Equipment]!
+  equipment(id_equipment: ID!): Equipment!
+}
+
+#### Equipment
+type Equipment {
+  id: ID!
+  name: String!
+  reference: String
+  public: Boolean
+  available: Boolean
+  status: StatusEnum
+  image: String
+  #company: Company : verifier a garder company or category
+  #category: Category
+  #user: User
+}
+
+enum StatusEnum {
+  GOOD
+  BAD
+}
