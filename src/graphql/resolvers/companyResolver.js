@@ -2,11 +2,10 @@ const companyProvider = require('../../database/providers/CompanyProvider');
 
 module.exports = {
   Query: {
-    company: (parent, args, ctx, info) => {
-      return {
-        name: 'Oyez',
-        address: 'tunis',
-      };
+    company: (_, args) => {
+      const company = companyProvider.getCompany(args.id_company);
+
+      return company;
     },
 
     companies: (parent, args, ctx, info) => {
@@ -19,6 +18,7 @@ module.exports = {
   Mutation: {
     createCompany: (_, args) => {
       const company = companyProvider.createCompany(args.data);
+
       return company;
     },
 
