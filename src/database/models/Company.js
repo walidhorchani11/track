@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const CompanySchema = new Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: true, unique: true },
   address: String,
   createdAt: { type: Date, default: new Date() },
 });
