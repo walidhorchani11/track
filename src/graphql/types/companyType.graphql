@@ -9,8 +9,6 @@ type Mutation {
   deleteCompany(id_company: ID!): Company!
 }
 
-### Company
-
 type Company {
   id: ID!
   name: String!
